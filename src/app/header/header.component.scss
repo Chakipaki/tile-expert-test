@@ -1,0 +1,47 @@
+.header {
+  width: 100%;
+  background: #4876c3;
+  padding: 0 20px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .logo {
+    position: relative;
+    margin-right: 120px;
+
+    p {
+      font-size: 26px;
+      font-family: "Esqadero", sans-serif;
+      color: #FFF;
+      line-height: 0.95;
+      font-weight: 400;
+
+      &:first-letter {
+        color: #db4437;
+      }
+    }
+    img {
+      position: absolute;
+      bottom: -50%;
+      right: 0;
+    }
+  }
+
+  app-navbar {
+    height: 100%;
+  }
+
+  app-actions {
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .header {
+    .logo {
+      margin-right: 90px;
+    }
+  }
+}

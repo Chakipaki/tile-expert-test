@@ -1,0 +1,24 @@
+.actions {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  svg, img {
+    cursor: pointer;
+  }
+
+  .alerts {
+    margin: 0 27px;
+  }
+
+  .alerts-value {
+    position: absolute;
+    left: 55px;
+    top: 0;
+    background: #b71826;
+    padding: 2px 1px;
+    font-size: 10px;
+    line-height: 1;
+    color: #FFF;
+  }
+}
