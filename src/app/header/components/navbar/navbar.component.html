@@ -11,34 +11,5 @@
     <img (click)="handleSearch()" src="assets/imgs/header/search.png" alt="search">
     <img src="assets/imgs/header/add.png" alt="search">
   </div>
-  <form class="navbar__search" #searchbar="ngForm" (ngSubmit)="onSubmit(searchbar)" *ngIf="searchStatus">
-    <div class="field">
-      <img src="assets/imgs/header/dark-search.png" alt="search">
-      <input #searchField="ngModel" placeholder="Поиск" type="text" ngModel name="search" required>
-      <button type="submit">Найти</button>
-    </div>
-    <div class="additional" *ngIf="searchField.dirty">
-      <div class="top">
-        <input id="search-mine" type="checkbox" name="mine" ngModel>
-        <label for="search-mine">мои</label>
-        <input type="text" name="auth" placeholder="Автор" ngModel>
-      </div>
-      <div class="sorting">
-        <label for="sorting">Сортировать по:</label>
-        <select id="sorting" name="sorting" ngModel>
-          <option [defaultSelected]="true">Датa</option>
-        </select>
-      </div>
-      <div class="options">
-        <input id="member" type="checkbox" name="member" ngModel>
-        <label for="member">я участник</label>
-
-        <input id="inTitle" type="checkbox" name="inTitle" ngModel>
-        <label for="inTitle">в заголовке</label>
-
-        <input id="strongSearch" type="checkbox" name="strongSearch" ngModel>
-        <label for="strongSearch">строгий поиск</label>
-      </div>
-    </div>
-  </form>
+  <app-searchbar [status]="searchStatus"></app-searchbar>
 </nav>

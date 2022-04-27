@@ -1,0 +1,31 @@
+<form class="searchbar" #searchbar="ngForm" (ngSubmit)="onSubmit(searchbar)" *ngIf="status">
+  <div class="field" #field>
+    <img src="assets/imgs/header/dark-search.png" alt="search">
+    <input #searchField="ngModel" placeholder="Поиск" type="text" ngModel name="search" required>
+    <button type="submit">Найти</button>
+  </div>
+  <div class="additional" *ngIf="searchField.dirty">
+    <div class="top">
+      <input id="search-mine" type="checkbox" name="mine" ngModel>
+      <label for="search-mine">мои</label>
+      <input type="text" name="auth" placeholder="Автор" ngModel>
+    </div>
+    <div class="sorting">
+      <label for="sorting">Сортировать по:</label>
+      <select id="sorting" name="sorting" ngModel="date">
+        <option value="date" selected>Датa</option>
+        <option value="value2" selected>Значение 2</option>
+      </select>
+    </div>
+    <div class="options">
+      <input id="member" type="checkbox" name="member" ngModel>
+      <label for="member">я участник</label>
+
+      <input id="inTitle" type="checkbox" name="inTitle" ngModel>
+      <label for="inTitle">в заголовке</label>
+
+      <input id="strongSearch" type="checkbox" name="strongSearch" ngModel>
+      <label for="strongSearch">строгий поиск</label>
+    </div>
+  </div>
+</form>

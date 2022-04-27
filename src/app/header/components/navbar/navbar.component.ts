@@ -39,12 +39,6 @@ export class NavbarComponent implements OnInit {
     this.searchStatus = true
   }
 
-  onSubmit(el: any): void {
-    console.log(el)
-    this.searchStatus = false
-    console.log()
-  }
-
   constructor() { }
 
   ngOnInit(): void {
