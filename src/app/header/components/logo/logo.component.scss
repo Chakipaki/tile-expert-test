@@ -1,0 +1,28 @@
+p {
+  font-size: 26px;
+  font-family: "Esqadero", sans-serif;
+  color: #FFF;
+  line-height: 0.95;
+  font-weight: 400;
+
+  &:first-letter {
+    color: #db4437;
+  }
+}
+svg {
+  position: absolute;
+  bottom: -50%;
+  right: 0;
+}
+
+@media screen and (max-width: 1300px) {
+  p {
+    font-size: 19.5px;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  p {
+    font-size: 24px;
+  }
+}
