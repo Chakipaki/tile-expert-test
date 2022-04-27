@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-searchbar',
@@ -14,7 +14,12 @@ export class SearchbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(form: any): void {
+  onSubmit(form: any, field: any): void {
     this.status = false
+    console.log(field)
+  }
+
+  clearSearchField(field: any):void {
+    field.reset()
   }
 }

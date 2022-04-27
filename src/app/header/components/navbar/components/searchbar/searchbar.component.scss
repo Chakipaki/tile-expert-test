@@ -16,15 +16,23 @@
     animation: .5s linear show-searchbar forwards;
     margin-left: auto;
 
-    img {
+    .loop, .close {
       position: absolute;
-      left: 10px;
       top: 50%;
       transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .loop {
+      left: 10px;
+    }
+
+    .close {
+      right: 80px;
     }
 
     input {
-      width: 100%;
+      width: calc(100% - 70px);
       border: none;
       border-radius: 2px 0 0 2px;
       height: 40px;
