@@ -8,17 +8,33 @@
   }
 
   .alerts {
-    margin: 0 27px;
+    margin: 0 16px;
   }
 
   .alerts-value {
     position: absolute;
-    left: 72px;
-    top: -5px;
+    left: 62px;
+    top: -2px;
     background: #b71826;
     padding: 2px 1px;
     font-size: 10px;
     line-height: 1;
     color: #FFF;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .actions {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 44px;
+
+    .alerts-value {
+      left: calc(50% + 6px);
+      transform: translateX(-50%);
+    }
   }
 }

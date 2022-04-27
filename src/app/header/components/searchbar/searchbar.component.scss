@@ -1,8 +1,19 @@
+.icons-group {
+  display: flex;
+  align-items: center;
+
+  .search-icon, .add-icon {
+    margin-right: 32px;
+    cursor: pointer;
+  }
+}
+
 .searchbar {
   position: absolute;
   top: 8px;
-  left: 0;
+  left: 300px;
   width: 100%;
+  max-width: 860px;
   padding: 0 72px 0 0;
   flex-direction: column;
   z-index: 3;
@@ -74,6 +85,7 @@
       display: flex;
       align-items: center;
       margin-bottom: 13px;
+      width: 100%;
 
       label {
         margin-right: 20px;
@@ -93,7 +105,6 @@
     .sorting {
       display: flex;
       align-items: center;
-      margin-bottom: 20px;
 
       label {
         margin-right: 26px;
@@ -101,16 +112,25 @@
       }
 
       select {
-        width: 145px;
+        min-width: 145px;
+        width: fit-content;
         background: #f2f2f2;
         overflow: hidden;
         border: 1px solid #dcdcdc;
+        height: 40px;
       }
     }
 
     .options {
+      margin-top: 20px;
       display: flex;
       align-items: center;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
 
       label {
         font-size: 12px;
@@ -135,5 +155,74 @@
   }
   to  {
     width: 0;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .searchbar {
+    left: 255px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+
+  .searchbar {
+    left: 185px;
+    max-width: 675px;
+  }
+
+  .icons-group {
+    margin-left: 6px;
+
+    .search-icon, .add-icon {
+      margin-right: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .searchbar {
+    left: 0;
+    max-width: unset;
+    padding: 0 15px;
+  }
+
+  .icons-group {
+    margin-left: 0;
+
+    .search-icon, .add-icon {
+      margin: 0;
+    }
+
+    .add-icon {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 590px) {
+  .searchbar {
+    .additional {
+      width: 100%;
+      .top {
+
+        input[type=text] {
+          width: 100%;
+          height: 36px;
+          border: 1px solid #d3d3d3;
+        }
+      }
+
+      .options {
+        margin-top: 8px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        div {
+          margin-top: 12px;
+        }
+      }
+    }
   }
 }
