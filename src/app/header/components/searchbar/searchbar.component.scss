@@ -74,11 +74,34 @@
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
 
     input[type=checkbox] {
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: #FFF;
       margin-right: 9px;
       border: 2px solid #d3d3d3;
       width: 18px;
       height: 18px;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: .1s all linear;
+
+      &:after {
+        content: "\2714";
+        color: #FFF;
+        font-size: 12px;
+        display: none;
+      }
+
+      &:checked {
+        background: #8fc04f;
+        border: none;
+
+        &:after {
+          display: flex;
+        }
+      }
     }
 
     .top {
@@ -208,7 +231,7 @@
       .top {
 
         input[type=text] {
-          width: 100%;
+          width: calc(100% - 18px - 23px);
           height: 36px;
           border: 1px solid #d3d3d3;
         }
