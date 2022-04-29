@@ -24,6 +24,7 @@ export class SearchbarComponent implements OnInit {
 
   @Input() status: boolean = false
   animationStatus = 'end'
+  additionalStatus = false
 
   constructor() {
   }
@@ -31,9 +32,15 @@ export class SearchbarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(form: Form): void {
+  onSubmit(form: Form, log: any): void {
     this.status = false
+    this.additionalStatus = false
   }
+
+  onAdditional(e: FocusEvent): void {
+    this.additionalStatus = true
+  }
+
 
   clearSearchField(field: any):void {
     field.reset()
